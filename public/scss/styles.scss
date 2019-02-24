@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand'); 
+
+*{
+  font-family: 'Quicksand', sans-serif;
+}
+
+body{
+  margin: 0;
+  color: #eee;
+  overflow: hidden;
+}
+
+.app-container{
+  background: #111;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template: auto auto auto;
+}
+
+.item{
+  background-color: #222;
+  border:1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 10;
+}
+
+.item2{
+  grid-row-start:2;
+  grid-row-end: 3;
+  grid-column-start:1;
+  grid-column-end:6;
+}
+
+.item3{
+  grid-row-start: 3;
+  grid-row-end: 20;
+  grid-column-start:1;
+  grid-column-end:6;
+
+}
+
+.item4{
+  grid-row-start: 2;
+  grid-row-end: 20;
+  grid-column-start: 6;
+  grid-column-end: 10;
+}
+
+

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand'); 
+
+.header-section{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cart{
+  font-size: 1.5em;
+  color:#777;
+
+  span{
+    color:#eee;
+  }
+}
+
+.heading{
+  h1{
+    color:#fff;
+  }
+  h1>span{
+    color:greenyellow;
+  }
+}
+
+
