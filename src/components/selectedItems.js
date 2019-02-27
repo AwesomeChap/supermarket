@@ -30,7 +30,7 @@ export default class selected extends Component{
             </tr>
           </thead>
           <tbody>
-            <>{items}</>
+            {items.length ? <>{items}</> : <div className="init-msg">No Food Item Selected</div> }
           </tbody>
         </table>
       </div>

@@ -25874,7 +25874,9 @@ function (_Component) {
         className: "selected-section"
       }, _react.default.createElement("div", {
         className: "heading"
-      }, "Selected Items"), _react.default.createElement("table", null, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Description"), _react.default.createElement("th", null, "Kcal"), _react.default.createElement("th", null, "Protein(g)"), _react.default.createElement("th", null, "Fat(g)"))), _react.default.createElement("tbody", null, _react.default.createElement(_react.default.Fragment, null, items))));
+      }, "Selected Items"), _react.default.createElement("table", null, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Description"), _react.default.createElement("th", null, "Kcal"), _react.default.createElement("th", null, "Protein(g)"), _react.default.createElement("th", null, "Fat(g)"))), _react.default.createElement("tbody", null, items.length ? _react.default.createElement(_react.default.Fragment, null, items) : _react.default.createElement("div", {
+        className: "init-msg"
+      }, "No Food Item Selected"))));
     }
   }]);
 

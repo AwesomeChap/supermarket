@@ -91,7 +91,8 @@
     padding: 4.5vh 0; }
   .selected-section table {
     width: 100%;
-    border-collapse: collapse; }
+    border-collapse: collapse;
+    text-align: center; }
     .selected-section table thead {
       cursor: default;
       pointer-events: none; }
@@ -109,6 +110,15 @@
       border: none;
       text-align: center;
       padding: 2vh 1vh; }
+
+.init-msg {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #444;
+  margin: 10px 0;
+  text-align: center;
+  color: yellowgreen; }
 .food-items {
   display: flex;
   flex-wrap: wrap;
