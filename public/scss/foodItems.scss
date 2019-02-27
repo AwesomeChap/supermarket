@@ -70,3 +70,13 @@
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
+.info{
+  // position: absolute;
+  bottom: 0;
+  position: sticky;
+  width: 100%;
+  color: yellowgreen;
+  font-size: 10px;
+  background-color: #444;
+}

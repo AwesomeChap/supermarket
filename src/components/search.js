@@ -25,7 +25,7 @@ export default class Search extends Component{
           <input 
             value={this.state.value}
             onChange={this.handleChange} 
-            placeholder={"Tea, Biscuit, Namkeen, etc"} 
+            placeholder={"Taco, Yogurt, Karare, etc"} 
             type="text" className="input"
           />
           <div onClick={this.clear} className="close-icon">

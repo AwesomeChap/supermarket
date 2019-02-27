@@ -25714,7 +25714,7 @@ function (_Component) {
       }, _react.default.createElement("input", {
         value: this.state.value,
         onChange: this.handleChange,
-        placeholder: "Tea, Biscuit, Namkeen, etc",
+        placeholder: "Taco, Yogurt, Karare, etc",
         type: "text",
         className: "input"
       }), _react.default.createElement("div", {
@@ -26035,7 +26035,9 @@ function (_Component) {
       return (// <ScrollArea>
         _react.default.createElement("div", {
           className: "food-items"
-        }, foodItems) // </ScrollArea>
+        }, foodItems, _react.default.createElement("div", {
+          className: "info"
+        }, _react.default.createElement("ul", null, _react.default.createElement("li", null, "For insertion of items into the selected list, you may selected any item from above section."), _react.default.createElement("li", null, "For deletion of items from the selected list, you may Click on any row from above selected items section.")))) // </ScrollArea>
 
       );
     }
@@ -45710,7 +45712,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61453" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55714" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
