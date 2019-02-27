@@ -13,16 +13,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : true}));
 
 app.get('/api/items',(req,res)=>{
-  const str = req.query.q;
-  // res.json({data : req.query.q});
+  const str = req.query.q || '';
 
-  FoodItem.find({}).then((FoodItems) => {
+  FoodItem.find({"name":{"$regex":str,$options:"i"}}).then((FoodItems) => {
     res.json({data : FoodItems});
   }).catch(e => res.json({error : e}));
 
 })
 
-// to seed data quickly use : curl -X POST -H 'content-type:application/json' -d '{"name":"zab","kcal":45,"protien":3,"fat":13,"imgUrl":"none"}' http://localhost:3000/api/item
+// to seed data quickly, you may use : curl -X POST -H 'content-type:application/json' -d '{"name":"zab","kcal":45,"protien":3,"fat":13,"imgUrl":"none"}' http://localhost:3000/api/item
 app.post('/api/item',(req,res)=>{
   const {name, kcal, protien, fat, imgUrl} = req.body;
   const item = new FoodItem({

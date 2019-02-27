@@ -15,15 +15,15 @@ body{
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template: auto auto auto;
+  // grid-template: auto auto auto;
 }
 
 .item{
   background-color: #222;
   border:1px solid #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .item1 {
@@ -31,6 +31,7 @@ body{
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 10;
+  height: 10vh;
 }
 
 .item2{
@@ -38,6 +39,7 @@ body{
   grid-row-end: 3;
   grid-column-start:1;
   grid-column-end:6;
+  height: 10vh;
 }
 
 .item3{
@@ -45,7 +47,9 @@ body{
   grid-row-end: 20;
   grid-column-start:1;
   grid-column-end:6;
-
+  height: 80vh;
+  width:60vw;
+  overflow-y: auto;
 }
 
 .item4{
@@ -53,6 +57,7 @@ body{
   grid-row-end: 20;
   grid-column-start: 6;
   grid-column-end: 10;
+  width:40vw;
 }
 
 
