@@ -29,7 +29,7 @@ export default class Search extends Component{
             type="text" className="input"
           />
           <div onClick={this.clear} className="close-icon">
-            {!this.state.value ? (<i className="fas fa-search"></i>) : (<i class="fas fa-times"></i>)}
+            {!this.state.value ? (<i className="fas fa-search"></i>) : (<i className="fas fa-times"></i>)}
           </div>
         </div>
       </div>

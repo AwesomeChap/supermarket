@@ -25723,7 +25723,7 @@ function (_Component) {
       }, !this.state.value ? _react.default.createElement("i", {
         className: "fas fa-search"
       }) : _react.default.createElement("i", {
-        class: "fas fa-times"
+        className: "fas fa-times"
       }))));
     }
   }]);
@@ -25756,7 +25756,7 @@ var _default = function _default(props) {
     className: "selected-section"
   }, _react.default.createElement("div", {
     className: "heading"
-  }, "Selected Items"), _react.default.createElement("table", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Description"), _react.default.createElement("th", null, "Kcal"), _react.default.createElement("th", null, "Protein(g)"), _react.default.createElement("th", null, "Fat(g)")), _react.default.createElement("tr", null, _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample")), _react.default.createElement("tr", null, _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample")), _react.default.createElement("tr", null, _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"))));
+  }, "Selected Items"), _react.default.createElement("table", null, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Description"), _react.default.createElement("th", null, "Kcal"), _react.default.createElement("th", null, "Protein(g)"), _react.default.createElement("th", null, "Fat(g)"))), _react.default.createElement("tbody", null, _react.default.createElement("tr", null, _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample")), _react.default.createElement("tr", null, _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample")), _react.default.createElement("tr", null, _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample"), _react.default.createElement("td", null, "Sample")))));
 };
 
 exports.default = _default;
@@ -45309,7 +45309,13 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
 
     _defineProperty(_assertThisInitialized(_this), "handleInputChange", function (value) {
-      console.log(value);
+      // console.log(value);
+      _axios.default.get("/api/items?q=".concat(value)).then(function (_ref) {
+        var data = _ref.data;
+        console.log(data);
+      }).catch(function (e) {
+        return console.log(e);
+      });
     });
 
     _this.state = {};
@@ -45389,7 +45395,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60726" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59481" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

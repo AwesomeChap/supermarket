@@ -11,7 +11,10 @@ export default class App extends Component{
   }
 
   handleInputChange = (value) => {
-    console.log(value);
+    // console.log(value);
+    axios.get(`/api/items?q=${value}`).then(({data}) => {
+      console.log(data);
+    }).catch(e => console.log(e));
   } 
 
   render(){

@@ -16,28 +16,27 @@
     width: 100%;
     border-collapse: collapse ;
 
-    tr>th{
+    thead{
       cursor: default;
+      pointer-events: none;
+      tr{
+        background-color: #343434;
+      }
     }
 
-    tr:nth-child(1):hover{
-      background-color: #343434 !important;
-    }
-
-    tr{
+    tbody{
       cursor: pointer;
-    }
-
-    tr:nth-child(n):hover{
-      background-color: #555;
-    }
-    
-    tr:nth-child(odd){
-      background-color: #343434;
-    }
-
-    tr:nth-child(even){
-      background-color: #444;
+      tr:nth-child(n):hover{
+        background-color: #555;
+      }
+      
+      tr:nth-child(even){
+        background-color: #343434;
+      }
+  
+      tr:nth-child(odd){
+        background-color: #444;
+      }
     }
 
     td,th{

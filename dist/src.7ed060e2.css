@@ -38,7 +38,7 @@
     border-radius: 5px; }
   .search-section input {
     width: 92%;
-    background-color: #333;
+    background-color: transparent;
     border: none;
     outline: none;
     color: white;
@@ -91,18 +91,19 @@
   .selected-section table {
     width: 100%;
     border-collapse: collapse; }
-    .selected-section table tr > th {
-      cursor: default; }
-    .selected-section table tr:nth-child(1):hover {
-      background-color: #343434 !important; }
-    .selected-section table tr {
+    .selected-section table thead {
+      cursor: default;
+      pointer-events: none; }
+      .selected-section table thead tr {
+        background-color: #343434; }
+    .selected-section table tbody {
       cursor: pointer; }
-    .selected-section table tr:nth-child(n):hover {
-      background-color: #555; }
-    .selected-section table tr:nth-child(odd) {
-      background-color: #343434; }
-    .selected-section table tr:nth-child(even) {
-      background-color: #444; }
+      .selected-section table tbody tr:nth-child(n):hover {
+        background-color: #555; }
+      .selected-section table tbody tr:nth-child(even) {
+        background-color: #343434; }
+      .selected-section table tbody tr:nth-child(odd) {
+        background-color: #444; }
     .selected-section table td, .selected-section table th {
       border: none;
       text-align: center;
