@@ -12,9 +12,9 @@ export default class selected extends Component{
   }
 
   render(){
-    const items = this.props.items.map( i => {
+    const items = this.props.items.map( (i,index) => {
       return(
-        <SelectedItem onDelete={this.props.onDelete} item={i} key={i.name} />
+        <SelectedItem onDelete={this.props.onDelete} item={i} key={index} />
       );
     })
     return(
@@ -25,12 +25,12 @@ export default class selected extends Component{
             <tr>
               <th>Description</th>
               <th>Kcal</th>
-              <th>Protein(g)</th>
-              <th>Fat(g)</th>
+              <th>Protein <span>(g)</span> </th>
+              <th>Fat <span>(g)</span> </th>
             </tr>
           </thead>
           <tbody>
-            {items.length ? <>{items}</> : <div className="init-msg">No Food Item Selected</div> }
+            {items.length ? <>{items}</> : <tr><td colSpan='4'><div /*className="init-msg"*/>No Food Item Selected</div></td></tr> }
           </tbody>
         </table>
       </div>

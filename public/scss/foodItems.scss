@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+
 .food-items{
   // width:60vw;
   display: flex;
@@ -26,17 +28,11 @@
       width:100%;
       height: 100%;
       position: absolute;
-      filter: blur(0px) brightness(100%);
-      -webkit-filter: blur(0px) brightness(100%);
+      filter: brightness(100%);
+      -webkit-filter: brightness(100%);
+      // filter: blur(0px) brightness(100%);
+      // -webkit-filter: blur(0px) brightness(100%);
       cursor: pointer;
-    }
-
-    .details{
-      position: relative;
-      z-index: 1;
-      margin: 10px;
-      transform: translate(0,-100%);
-      opacity: 0;
     }
   }
 
@@ -52,7 +48,17 @@
 }
 
 .details{
+  position: relative;
+  z-index: 1;
+  margin: 10px;
+  transform: translate(0,-100%);
+  opacity: 0;
   pointer-events: none;
+
+  span {
+    font-weight: bold;
+    font-family: 'PT Mono', monospace !important;
+  }
 }
 
 .food-item-wrapper:hover .details{
@@ -62,8 +68,10 @@
 }
 
 .food-item-wrapper:hover img{
-  -webkit-filter: blur(2px) brightness(40%);
-  filter: blur(2px) brightness(40%);
+  -webkit-filter: brightness(20%);
+  filter: brightness(20%);
+  // -webkit-filter: blur(2px) brightness(40%);
+  // filter: blur(2px) brightness(40%);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -77,6 +85,7 @@
   position: sticky;
   width: 100%;
   color: yellowgreen;
-  font-size: 10px;
-  background-color: #444;
+  font-size: 11px;
+  background-color: #333;
+  // letter-spacing: 0.1em;
 }

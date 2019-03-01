@@ -15,9 +15,9 @@ export default class FoodItem extends Component{
         <div className="food-item">
           <img src={this.props.item.imgUrl} alt=""/>
           <div className="details">
-            <div className="detail">Kcal &emsp;&nbsp;: {this.props.item.kcal}</div>
-            <div className="detail">Protien : {this.props.item.protien}</div>
-            <div className="detail">Fat &emsp;&nbsp;&nbsp;&nbsp;: {this.props.item.fat}</div>
+            <div className="detail">Kcal &emsp;&nbsp; <span>{this.props.item.kcal}</span> </div>
+            <div className="detail">Protien &nbsp;<span>{this.props.item.protien}</span> </div>
+            <div className="detail">Fat &emsp;&nbsp;&nbsp;&nbsp; <span>{this.props.item.fat}</span> </div>
           </div>
         </div>
         <div className="food-name">{this.props.item.name}</div>

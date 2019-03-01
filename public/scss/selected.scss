@@ -23,6 +23,14 @@
       pointer-events: none;
       tr{
         background-color: #343434;
+
+        th{
+          font-weight: 100 !important;
+        }
+
+        span{
+          color: #999;
+        }
       }
     }
 

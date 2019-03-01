@@ -19,8 +19,9 @@ export default class FoodItems extends Component{
           {foodItems}
           <div className="info">
             <ul>
-              <li>For insertion of items into the selected list, you may selected any item from above section.</li>
+              <li>For insertion of items into the selected list, you may search and select any item from above section.</li>
               <li>For deletion of items from the selected list, you may Click on any row from above selected items section.</li>
+              <li>Data displayed here is 100% incorrect. Please do not get confused with real details of product displayed.</li>
             </ul>
           </div>
         </div>      

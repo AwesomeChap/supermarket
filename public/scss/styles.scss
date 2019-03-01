@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand'); 
+@import url('https://fonts.googleapis.com/css?family=PT+Mono|Quicksand');
+// @import url('https://fonts.googleapis.com/css?family=PT+Mono'); 
 
 *{
   font-family: 'Quicksand', sans-serif;
@@ -8,6 +9,7 @@ body{
   margin: 0;
   color: #eee;
   overflow: hidden;
+  
 }
 
 .app-container{
@@ -58,6 +60,26 @@ body{
   grid-column-start: 6;
   grid-column-end: 10;
   width:40vw;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #555; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa; 
 }
 
 

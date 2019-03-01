@@ -25863,20 +25863,20 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var items = this.props.items.map(function (i) {
+      var items = this.props.items.map(function (i, index) {
         return _react.default.createElement(_selectedItem.default, {
           onDelete: _this2.props.onDelete,
           item: i,
-          key: i.name
+          key: index
         });
       });
       return _react.default.createElement("div", {
         className: "selected-section"
       }, _react.default.createElement("div", {
         className: "heading"
-      }, "Selected Items"), _react.default.createElement("table", null, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Description"), _react.default.createElement("th", null, "Kcal"), _react.default.createElement("th", null, "Protein(g)"), _react.default.createElement("th", null, "Fat(g)"))), _react.default.createElement("tbody", null, items.length ? _react.default.createElement(_react.default.Fragment, null, items) : _react.default.createElement("div", {
-        className: "init-msg"
-      }, "No Food Item Selected"))));
+      }, "Selected Items"), _react.default.createElement("table", null, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "Description"), _react.default.createElement("th", null, "Kcal"), _react.default.createElement("th", null, "Protein ", _react.default.createElement("span", null, "(g)"), " "), _react.default.createElement("th", null, "Fat ", _react.default.createElement("span", null, "(g)"), " "))), _react.default.createElement("tbody", null, items.length ? _react.default.createElement(_react.default.Fragment, null, items) : _react.default.createElement("tr", null, _react.default.createElement("td", {
+        colSpan: "4"
+      }, _react.default.createElement("div", null, "No Food Item Selected"))))));
     }
   }]);
 
@@ -25950,11 +25950,11 @@ function (_Component) {
         className: "details"
       }, _react.default.createElement("div", {
         className: "detail"
-      }, "Kcal \u2003\xA0: ", this.props.item.kcal), _react.default.createElement("div", {
+      }, "Kcal \u2003\xA0 ", _react.default.createElement("span", null, this.props.item.kcal), " "), _react.default.createElement("div", {
         className: "detail"
-      }, "Protien : ", this.props.item.protien), _react.default.createElement("div", {
+      }, "Protien \xA0", _react.default.createElement("span", null, this.props.item.protien), " "), _react.default.createElement("div", {
         className: "detail"
-      }, "Fat \u2003\xA0\xA0\xA0: ", this.props.item.fat))), _react.default.createElement("div", {
+      }, "Fat \u2003\xA0\xA0\xA0 ", _react.default.createElement("span", null, this.props.item.fat), " "))), _react.default.createElement("div", {
         className: "food-name"
       }, this.props.item.name));
     }
@@ -26039,7 +26039,7 @@ function (_Component) {
           className: "food-items"
         }, foodItems, _react.default.createElement("div", {
           className: "info"
-        }, _react.default.createElement("ul", null, _react.default.createElement("li", null, "For insertion of items into the selected list, you may selected any item from above section."), _react.default.createElement("li", null, "For deletion of items from the selected list, you may Click on any row from above selected items section.")))) // </ScrollArea>
+        }, _react.default.createElement("ul", null, _react.default.createElement("li", null, "For insertion of items into the selected list, you may search and select any item from above section."), _react.default.createElement("li", null, "For deletion of items from the selected list, you may Click on any row from above selected items section."), _react.default.createElement("li", null, "Data displayed here is 100% incorrect. Please do not get confused with real details of product displayed.")))) // </ScrollArea>
 
       );
     }
@@ -45611,7 +45611,12 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "handleDelete", function (item) {
       _this.setState(function (prevState) {
         var index = prevState.selectedItems.indexOf(item);
-        prevState.selectedItems.splice(index, 1);
+        console.log(index);
+
+        if (index > -1) {
+          prevState.selectedItems.splice(index, 1);
+        }
+
         return {
           selectedItems: prevState.selectedItems
         };
@@ -45714,7 +45719,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55714" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63010" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

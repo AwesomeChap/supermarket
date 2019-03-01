@@ -26,7 +26,10 @@ export default class App extends Component{
   handleDelete = (item) => {
     this.setState((prevState)=>{
       var index = prevState.selectedItems.indexOf(item);
-      prevState.selectedItems.splice(index,1);
+      console.log(index);
+      if( index > -1){
+        prevState.selectedItems.splice(index,1);
+      }
       return{
         selectedItems : prevState.selectedItems
       }
