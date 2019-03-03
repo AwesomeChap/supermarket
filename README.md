@@ -3,7 +3,7 @@ It is a MERN based application, through which a person can check the information
 
 <p align="center">
   <img src="https://github.com/AwesomeChap/supermarket/blob/master/public/images/demo.png" width="800" hspace="20">
-</png
+</p>
 
 ## Available Scripts
 
