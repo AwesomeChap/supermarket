@@ -1,5 +1,11 @@
 import React, {Component} from 'react';
 
+const getHighlightedText = (text, highlight) => {
+  // Split text on higlight term, include term itself into parts, ignore case
+  var parts = text.split(new RegExp(`(${highlight})`, 'gi'));
+  return <span>{parts.map(part => part.toLowerCase() === highlight.toLowerCase() ? <b><font color={"#fff"}>{part}</font></b> : part)}</span>;
+}
+
 export default class FoodItem extends Component{
   constructor(props){
     super(props);
@@ -20,7 +26,9 @@ export default class FoodItem extends Component{
             <div className="detail">Fat &emsp;&nbsp;&nbsp;&nbsp; <span>{this.props.item.fat}</span> </div>
           </div>
         </div>
-        <div className="food-name">{this.props.item.name}</div>
+        <div className="food-name"> 
+          {getHighlightedText(this.props.item.name, this.props.query)}
+        </div>
       </div>
     );
   }

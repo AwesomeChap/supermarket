@@ -10,7 +10,7 @@ export default class FoodItems extends Component{
   render(){
     const foodItems = this.props.foodItems.map((item)=>{
       return(
-        <FoodItem onSelect={this.props.onSelect} key = {item.name} item = {item} />
+        <FoodItem query={this.props.query} onSelect={this.props.onSelect} key = {item.name} item = {item} />
       );
     });
     return(

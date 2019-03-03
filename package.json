@@ -7,7 +7,7 @@
     "build:dev": "parcel public/index.html",
     "build:prod": "parcel build public/index.html",
     "start": "node server/server.js",
-    "start:dev": "nodemion server/server.js"
+    "start:dev": "nodemon server/server.js"
   },
   "author": "AwesomeChap",
   "license": "ISC",
@@ -19,8 +19,10 @@
     "mongoose": "^5.4.15",
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.11.0",
+    "r": "0.0.5",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-highlighter": "^0.4.3",
     "react-scrollbar": "^0.5.4"
   },
   "devDependencies": {
