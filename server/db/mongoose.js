@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+// require('dotenv').config();
 
 const mongoURI = `mongodb+srv://user1999:${process.env.MONGO_ATLAS_PW}@food-tems-e14pe.mongodb.net/test?retryWrites=true`;
 
