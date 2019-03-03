@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 const getHighlightedText = (text, highlight) => {
   // Split text on higlight term, include term itself into parts, ignore case
   var parts = text.split(new RegExp(`(${highlight})`, 'gi'));
-  return <span>{parts.map(part => part.toLowerCase() === highlight.toLowerCase() ? <b><font color={"#fff"}>{part}</font></b> : part)}</span>;
+  return <span>{parts.map(part => part.toLowerCase() === highlight.toLowerCase() ? <font color={"#fff"}>{part}</font> : part)}</span>;
 }
 
 export default class FoodItem extends Component{
