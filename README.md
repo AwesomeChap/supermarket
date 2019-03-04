@@ -30,9 +30,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Usage
 
-1. In order to run this project, You are required to have some seed data which is to be displayed. Fo that you need to create your account [here](https://www.mongodb.com/cloud/atlas). After creattion of the account you need to genearate MONGO_URI in order to connect to database
+* In order to run this project, You are required to have some seed data which is to be displayed. Fo that you need to create your account [here](https://www.mongodb.com/cloud/atlas). After creattion of the account you need to genearate MONGO_URI in order to connect to database
 
-2. Create a nodemon.json at root directory for development server (to work with nodemon)
+* Create nodemon.json at root directory for development server (to work with nodemon)
 
 ```javascript
 {
@@ -42,9 +42,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 }
 ```
 
-3. Create a .env at root directory to work with node
+* Create .env at root directory to work with node 
 
 ```javascript
   NODE_ENV=development
   MONGO_ATLAS_PW=<YOUR_MONGO_URI_GOES_HERE>
 ```
+
+* now you just need to do `npm install`
