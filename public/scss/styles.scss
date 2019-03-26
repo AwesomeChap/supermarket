@@ -131,6 +131,7 @@ body{
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
+    animation: fadeOut 0.2s 2.6s forwards;
 
     .text{
       opacity: 0;
@@ -182,6 +183,12 @@ body{
     }
 }
 
+@keyframes fadeOut{
+  to{
+    opacity: 0;
+  }
+}
+
 .wrapper{
   display: flex;
   justify-content: center;
@@ -220,8 +227,23 @@ body{
     animation: slideIn 0.3s 0.4s forwards;
 
     .content{
+      margin-top: -10vh;
       font-size: 36px;
       color: #999;
+
+      .heading{
+        font-size: 60px;
+        margin-bottom: 5vh;
+        color: lawngreen;
+        
+        span:nth-child(1){
+          color: white;
+        }
+
+        span:nth-child(2){
+          color: #777;
+        }
+      }
 
       .text{
         width: 70%;

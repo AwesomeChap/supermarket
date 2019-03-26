@@ -26197,6 +26197,8 @@ function (_Component) {
       }, _react.default.createElement("div", {
         className: "content"
       }, _react.default.createElement("div", {
+        className: "heading"
+      }, "Super", _react.default.createElement("span", null, "Market"), " ", _react.default.createElement("span", null, "FoodInfo")), _react.default.createElement("div", {
         onClick: this.handleClick,
         className: "button"
       }, "Get Started ", _react.default.createElement("span", null, "Get Started"), " "), _react.default.createElement("div", {
@@ -45916,7 +45918,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50348" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62148" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
