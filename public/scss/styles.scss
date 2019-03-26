@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Mono|Quicksand');
 // @import url('https://fonts.googleapis.com/css?family=PT+Mono'); 
 
+$eio : cubic-bezier(0.77, 0, 0.175, 1);
+
 *{
   font-family: 'Quicksand', sans-serif;
 }
@@ -23,9 +25,13 @@ body{
 .item{
   background-color: #222;
   border:1px solid #333;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  animation: fadeIn .5s forwards;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
 }
 
 .item1 {
@@ -62,6 +68,34 @@ body{
   width:40vw;
 }
 
+.item5{
+  grid-row-start: 1;
+  grid-row-end: 10;
+  grid-column-start: 1;
+  grid-column-end: 10;
+  height:100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60vw;
+    span{
+      margin: 20px;
+      text-align: center;
+      display: block;
+      color: #ddd;
+    }
+    text-align: justify;
+    color: #777;
+    font-size: 25px;
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -82,4 +116,163 @@ body{
   background: #aaa; 
 }
 
+.loader-wrapper{
+  height: 100vh;
+  width: 100vw;
+  background: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: goUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 2.8s forwards;
+  .loader{
+    height: 20vh;
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 
+    .text{
+      opacity: 0;
+      transform: translateY(3px);
+      color: #777;
+      font-size: 25px;
+      animation : fadeUp 0.5s 0.3s forwards;
+    }
+    .bar{
+      opacity: 0;
+      transform: translateY(10px);
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      width: 30vw;
+      height: 10px;
+      box-shadow: 0 0 20px #000;
+      background: #333;
+      animation : fadeUp 0.5s 0.6s forwards;
+
+      &:after{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        background-color: lawngreen;
+        animation: load 1s 1.3s $eio forwards;
+      }
+
+      @keyframes load {
+        to{
+          width: 100%;
+        }
+      }
+
+      @keyframes fadeUp {
+        to{
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@keyframes goUp {
+    to{
+      transform: translateY(-100vh);
+    }
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .image{
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 0.3s 0.2s forwards;
+
+    img{
+      display: inline-block;
+      width: 600px;
+    }
+  }
+
+  @keyframes slideIn {
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .content-block{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.3s 0.4s forwards;
+
+    .content{
+      font-size: 36px;
+      color: #999;
+
+      .text{
+        width: 70%;
+        font-size: 28px;
+      }
+
+      .button{
+        position: relative;
+        display: inline-block;
+        color: transparent;
+        padding: 20px 40px;
+        // background: transparent;
+        background: #1c1c1c;
+        box-shadow: 0 0 10px #000;
+        margin:20px 0;
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        span{
+          z-index: 1;
+          position: absolute;
+          display: inline-block;
+          color: #fff;
+          transition: all 0.3s;
+        }
+
+        &:after{
+          content : '';
+          background: #272727;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 10%;
+          width: 100%;
+          // z-index: -1;
+          transition: all 0.3s;
+        }
+
+        &:hover{
+          &:after{
+            height: 100%;
+          }
+
+          span{
+            color: lawngreen;
+          }
+        }
+      }
+    }
+
+  }
+}
