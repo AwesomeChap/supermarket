@@ -28,7 +28,11 @@ export default class Wrapper extends Component{
               <div className="content">
                 <div className="heading">Super<span>Market</span> <span>FoodInfo</span></div>
                 <div onClick={this.handleClick} className="button">Get Started <span>Get Started</span> </div>
-                <div className="text">This Application will give you information related to your Food Item like Kcal, Protien, etc and also let you compare between any two food Items or as many you want!</div>
+                <div className="text">
+                  Health play's a vital role in everybody's life.
+                  In order to stay healthy it becomes important to know that what you eat and what it's composed of.
+                  So click above, to choose items that suits you. 
+                </div>
               </div>
             </div>
           </div>

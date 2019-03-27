@@ -26203,7 +26203,7 @@ function (_Component) {
         className: "button"
       }, "Get Started ", _react.default.createElement("span", null, "Get Started"), " "), _react.default.createElement("div", {
         className: "text"
-      }, "This Application will give you information related to your Food Item like Kcal, Protien, etc and also let you compare between any two food Items or as many you want!")))));
+      }, "Health play's a vital role in everybody's life. In order to stay healthy it becomes important to know that what you eat and what it's composed of. So click above, to choose items that suits you.")))));
     }
   }]);
 
@@ -45918,7 +45918,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62148" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57257" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

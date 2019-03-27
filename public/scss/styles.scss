@@ -197,7 +197,7 @@ body{
   height: 100%;
 
   .image{
-    width: 100%;
+    width: 50%;
     text-align: center;
     opacity: 0;
     transform: translateX(-100px);
@@ -217,7 +217,7 @@ body{
   }
 
   .content-block{
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;

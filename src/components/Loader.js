@@ -10,7 +10,7 @@ export default class Loader extends Component{
     return(
       <div className="loader-wrapper">
         <div className="loader">
-          <div className="text">Fetching Food Items</div>
+          <div className="text">Fetching Content</div>
           <div className="bar"></div>
         </div>
       </div>
